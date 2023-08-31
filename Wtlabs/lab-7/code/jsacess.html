@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS DOM paragraph style</title>
+<style type="text/css">
+
+</style>
+</head> 
+<body align="center">
+<p id ='text'>JavaScript Exercise –test </p> 
+<div>
+<button id="jsstyle" onclick="js_style()">Style</button>
+</div>
+
+<script>
+	function js_style(){
+		var text = document.querySelector("#text");
+		text.style.cssText = "background-color:cyan;font-size:50px;font-family:ariel;";
+	}
+</script>
+</body>
+</html>

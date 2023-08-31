@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Error</title>
+	<script src="C:\Users\MANOJ\Desktop\compress.js"></script>
+</head>
+<body align="center">
+	<textarea rows="3" cols="30" class="error" onmouseleave="out()"></textarea>
+
+	<script>
+		function out(){
+			var len = $(".error").val().length;
+			if(len>10){
+			$(".error").css({"background-color":"yellow","border":"4px solid red"});
+		    }
+		}
+	</script>
+</body>
+</html>

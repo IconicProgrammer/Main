@@ -1,0 +1,18 @@
+<html>
+<head>
+ 
+<title>window size</title>
+</head>
+<body onload="getsize()" onresize="getsize()">
+<span id="span"></span>
+</body>
+<script>
+function getsize()
+{
+var x=document.documentElement.clientWidth;
+var y=document.documentElement.clientHeight;
+document.getElementById('span').innerHTML="width"+x+" "+"height"+y;
+}
+
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>text length</title>
+	<script src="C:\Users\MANOJ\Desktop\compress.js"></script>
+	<style></style>
+</head>
+<body align="center">
+	<div class="form">
+		<textarea rows="5" cols="30" class="text"></textarea>
+	</div>
+	<input type="button" value="submit" class="btn">
+	<br>
+	<input type="text" class="content">
+
+	<script>
+		$("document").ready(function(){
+			$(".btn").click(function(){
+				var len = $(".text").val().length;
+				$(".content").attr("value",`${len}`);
+			});
+		});
+	</script>
+</body>
+</html>

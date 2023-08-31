@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset=utf-8 />
+<title>Return first and last name from js</title>
+</head><body>
+<form id="form11" name="form">
+First name: <input type="text" name="fname" id="first"><br>
+Last name: <input type="text" name="lname" id="last"><br>
+<input type="submit" value="Submit" id="sub">
+</form>
+
+<script>
+
+	var word = document.querySelector("#sub");
+	word.addEventListener("click",fun);
+	function fun(e){
+		var first = document.querySelector("#first").value;
+		var last = document.querySelector("#last").value;
+		alert(first);
+		alert(last);
+	};
+</script>
+</body>
+</html>

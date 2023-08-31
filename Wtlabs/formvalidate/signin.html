@@ -1,0 +1,108 @@
+<html>
+<head>
+	<title>
+		Sign in Form
+	</title>
+	<style>
+		body{
+	background-image: url(https://i.pinimg.com/474x/24/38/e6/2438e632b29645a56eb9f7844945a219.jpg);
+	background-size: cover;
+	text-align: center;
+}
+		fieldset{
+	background-image: url(https://images.unsplash.com/photo-1581985673473-0784a7a44e39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmFja2dyb3VuZCUyMGRlc2lnbnxlbnwwfHwwfHw%3D&w=1000&q=80);
+	margin:10px 500px 400px 450px;
+	background-size: cover;
+}
+		table{
+	text-align: center;
+	align-content: center;
+	border-spacing: 30px;
+}
+		button{
+	border-radius: 50px;
+	width: 250px;
+	font-size: 16px;
+}
+</style>
+</head>
+<body>
+	<fieldset>
+		<p>SIGN IN</p>
+		<form>
+			<table align="center">
+				<tr>
+					<td>
+						Username:
+					</td>
+					<td>
+						<input type="text" name="user" id="user">
+					</td>
+				</tr>
+				<tr><td></td>
+			<td>
+				<span id="username" style="color:red;font-weight: bold;"></span>
+			</td>
+		</tr>
+				<tr>
+					<td>
+						Password:
+					</td>
+					<td>
+						<input type="Password" name="pass" id="pass">
+					</td>
+				</tr>
+				<tr><td></td>
+			<td>
+				<span id="password" style="color:red;font-weight: bold;"></span>
+			</td>
+		</tr>
+			</table>
+			<button>Login</button><br>
+			<br>
+			If you have not an Account <a href="finalformvalidat.html">Sign up</a>
+			<br>
+			<br>
+			Forget Password? <a href="forget.html">click here</a>
+		</form>
+	</fieldset>
+
+	<script type="text/javascript">
+		let finame = document.getElementById("user");
+      finame.addEventListener("input",validateuser);
+      function validateuser(){
+      	let word = document.getElementById("user");
+      	if(word.value.length<6 || word.value.length>15){
+      		let user = document.getElementById("username");
+      		user.innerHTML = "-->username length must in between 6 and 15";
+      	}
+      	else{
+      		let user = document.getElementById("username");
+      		user.innerHTML = " ";
+      	}
+      	return false;
+      }
+
+      var pass = document.querySelector('#pass');
+
+      pass.addEventListener("input",passw);
+
+      function passw(){
+      	var pa = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{6,20}$/
+      	if(pass.value.match(pa)){
+      		pass.style.cssText = "background-color:lightgreen";
+      		pass.style.border = "1px solid black";
+      		document.getElementById("password").innerHTML = "";
+	      }
+      	else{
+      		document.getElementById("password").innerHTML = "->Password length should min. 6";
+
+      		pass.style.cssText = "background-color:yellow";
+      		pass.style.border = "4px solid red";
+      	}
+      }
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temperature</title>
+	<style>
+		.btn{
+			position: relative;
+			left: 30px;
+		}
+	</style>
+</head>
+<body align="center">
+	<h1 align="center">
+		Temperature converter
+	</h1><br><br>
+	<form>
+		Temperature :-
+		<input type="number" name="Temperature" id="temp">
+		<br>
+		<br>
+		<div class="btn">
+		<input type="button" value="celsius" onclick="cel()">
+		<input type="button" value="Fahrenheit" onclick="far()">
+	</div>
+		<p id="con"> </p>
+	</form>
+	<script>
+	function cel(){
+		document.getElementById("con").innerHTML=`In Celsius : ${(document.getElementById("temp").value - 32)*(5/9)}`;
+	}
+	function far(){
+		document.getElementById("con").innerHTML=`In Fahrenheit : ${(document.getElementById("temp").value * 9/5)+32}`;
+	}
+	</script>
+</body>
+</html>
+<style>
+	body{
+		background-image: url();
+		background-repeat: repeat-y;
+		width: 100px;
+		height: 80px;
+	}
+</style>

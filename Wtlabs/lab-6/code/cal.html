@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>call</title>
+	<style>
+	fieldset{
+	width: 400px;
+	position: absolute;
+	top: 90px;
+	left: 400px;
+	background-color: skyblue;
+	border-radius: 30px;
+}
+
+body{
+	background-color: black;
+}
+
+table{
+	padding: 15px;
+	border-spacing: 25px;
+	color: blue;
+	font-size: 1.2rem;
+}
+
+input[type='text']{
+	background-color: slategray;
+	border-color: red;
+}
+
+input[type='button']{
+	width: 100px;
+	color: blue;
+	border-radius: 30px;
+	font-size: .9rem;
+	background-color: lightgray;
+	height: 25px;
+}
+
+input[type='button']:hover{
+	box-shadow:2px 2px 5px 5px gray;
+	font-size: 1rem;
+	background-color: cyan;
+}	
+	</style>
+</head>
+<body>
+
+<div class="form">
+<fieldset align="center">
+	<table align="center">
+		<tr>
+			<td>1st Number :</td>
+			<td><input type="number" name="first" id="first"></td>
+		</tr>
+		<tr>
+			<td>2nd Number :</td>
+			<td><input type="number" name="first" id="second"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Divide" id="divide" onclick="divide()"></td>
+			<td><input type="button" value="Multiply" id="multiply" onclick="multiply()"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Add" id="add" onclick="add()"></td>
+			<td><input type="button" value="Subtract" id="sub" onclick="subtract()"></td>
+		</tr>
+		<tr>
+			<td><p id="para">The Result:</p></td>
+			<td><p id="re"></p></td>
+
+		</tr>
+		
+	</table>
+</fieldset>
+</div>
+	<script>
+function add(){
+    var op1 = document.getElementById("first").value;
+    var op2 = document.getElementById("second").value;
+    document.getElementById("re").innerHTML = Number(op1)+Number(op2);
+}
+
+function subtract(){
+   var op1 = document.getElementById("first").value;
+   var op2 = document.getElementById("second").value; 
+    document.getElementById("re").innerHTML = op1-op2;
+}
+
+function divide(){
+    var op1 = document.getElementById("first").value;
+    var op2 = document.getElementById("second").value;
+    document.getElementById("re").innerHTML = op1/op2;
+}
+
+function multiply(){
+    var op1 = document.getElementById("first").value;
+    var op2 = document.getElementById("second").value;
+    document.getElementById("re").innerHTML = op1*op2;
+}
+	</script>
+</body>
+</html>
+

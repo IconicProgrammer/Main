@@ -1,0 +1,134 @@
+<html>
+<head>
+	<title>
+		Forget Password Form
+	</title>
+	<style>
+		body{
+			display: flex;
+			font-weight: bold;
+			justify-content: center;
+			align-items: center;
+	background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf0fQAk5DiYZcjdom_yV9qROkpIqHG6iY_-g&usqp=CAU);
+		background-size: cover;
+		background-attachment: fixed;
+		width: 100%;
+		}
+		input{
+			border-radius: 8px;
+			height: 18px;
+		}
+		fieldset{
+			padding: 25px;
+			border: 7px #bf1774;
+			border-style:outset;
+			background-color:#ffe6ff;
+			border-radius: 5%;
+		}
+		table{
+			border-spacing: 15px;
+			padding:0px;
+		}
+		#sub{
+			height: 30px;
+			border-radius: 50px;
+			border:2px solid red;
+			width:100px;
+			font-size: 16px;
+			background-image:linear-gradient(to right,skyblue,pink);
+			color: darkred;
+		}
+		#sub:hover{
+			box-shadow:2px 2px 5px 5px rgba(0, 0, 0, 0.5);
+		}
+		p{
+			color:blue;
+			font-size:20px;
+			font-style:italic;background-image: linear-gradient(to right,yellow,pink);
+			border: 2px solid gray;
+			padding: 3px;
+		}
+		
+	</style>
+</head>
+<body align='center'>
+	<form name="form" id="form">
+		<fieldset>
+		<legend><p>Forget Password</p></legend>
+		<table>
+			<td>Password:</td>
+			<td><input type="Password" name="pass" id="pass"></td>
+		</tr>
+		<tr><td></td>
+			<td>
+				<span id="password" style="color:red;font-weight: bold;"></span>
+			</td>
+		</tr>
+		<tr>
+			<td>Confirm Password:</td>
+			<td><input type="Password" name="conf" id="conf"></td>
+		</tr>
+		<tr><td></td>
+			<td>
+				<span id="cpassword" style="color:red;font-weight: bold;"></span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+						Enter OTP:
+					</td>
+					<td>
+						<input type="number" name="number" maxlength="4">
+					</td>
+		</tr>
+		</table>
+		<input type="submit" value="submit" id="sub" onclick = "return validatepass()">
+		</fieldset>
+	</form>
+	</fieldset>
+<script>
+
+	var word = document.querySelector("#conf");
+      word.addEventListener("input",function(){
+      	var password = document.querySelector("#pass").value;
+      	var confirm = document.querySelector("#conf").value;
+      	if(password==confirm){
+      		word.style.cssText = "background-color:lightgreen";
+      		word.style.border = "1px solid black";
+      	}
+      	else if(password!=confirm){
+      		word.style.cssText = "background-color:yellow";
+	        word.style.border = "4px solid red";
+      	}
+      })
+
+      word.addEventListener("blur",blur);
+      function blur(){
+      var word = document.querySelector("#conf");
+      	word.style.cssText = "background-color:white";
+      	word.style.border = "1px solid black";
+      }
+
+
+      var pass = document.querySelector('#pass');
+
+      pass.addEventListener("input",passw);
+	function passw(){
+      	var pa = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{6,20}$/
+      	if(pass.value.match(pa)){
+      		pass.style.cssText = "background-color:lightgreen";
+      		pass.style.border = "1px solid black";
+	      }
+      	else{
+      		document.getElementById("password").innerHTML = "->Password length should min. 6";
+
+      		pass.style.cssText = "background-color:yellow";
+      		pass.style.border = "4px solid red";
+      	}
+      }
+      
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

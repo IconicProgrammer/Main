@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form Access</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body align="center">
+		<form style="margin-top: 200px;">
+			<table align="center" style="border-spacing: 8px;">
+				<tr>
+					<td>
+						Enter New Password:
+					</td>
+					<td>
+						<input type="Password" name="Password" id="new">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						
+						Confirm Password:
+					</td>
+					<td>
+						<input type="Password" name="Password" id="conf">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Enter OTP:
+					</td>
+					<td>
+						<input type="number" name="number" maxlength="4">
+					</td>
+				</tr>
+			</table>
+			<div style="display: flex;justify-content: center;">  <!--align="center"-->
+			<input type="button" name="submit" value="submit" id="btn">
+		</div>
+		</form>
+		<div>
+			<p id="para">hello</p>
+		</div>
+	<script>
+		$("#btn").click(function(){
+			$("#para").html(`New:${$("#new").val()},\n Confirm:${$("#conf").val()}`)
+		});
+	</script>
+
+</body>
+</html>

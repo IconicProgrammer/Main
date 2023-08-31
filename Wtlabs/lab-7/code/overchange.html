@@ -1,0 +1,41 @@
+Code:
+<html>
+<head>
+<title>highlight</title>
+</head>
+<body>
+<p >[<a href="#" onMouseOver="highlight()" onMouseOut="return_normal()">link</a>]
+Gandhi<strong> University </strong>bof Knowledge Technologies (RGUKT), Basar, was established
+to provide quality higher education
+to the talented rural youth of the<strong>state of Telangana</strong> . Established in 2008 by the then united Government of Andhra Pradesh and later was
+adopted by the<strong> Government</strong> of Telangana through a special of
+<strong>act</strong>legislation.
+</p>
+<script>
+var bold_Items; window.onload = getBold_items(); function getBold_items()
+{
+ 
+bold_Items = document.getElementsByTagName('strong');
+}
+
+function highlight()
+{
+
+for (var i=0; i<bold_Items.length; i++)
+{
+bold_Items[i].style.color = "red";
+}
+}
+
+function return_normal()
+{
+
+for (var i=0; i<bold_Items.length; i++)
+{
+
+bold_Items[i].style.color = "black";
+}
+}
+</script>
+</body>
+</html>

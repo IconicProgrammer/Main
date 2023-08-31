@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>
+number or not
+</title>
+</head>
+<body >
+<form name="myform" onsubmit=" return validate()"> enter a number:<input type="text" name="num"><br><br>
+<button type="submit" name="button">Submit</button>
+</form>
+<script>
+function validate()
+{
+var x=document.myform.num.value; if(!(x.match(/^([0-9]+)$/)))
+{
+alert("not a number"); return false;
+}
+return true;
+}
+</script>
+ 
+</body>
+</html>

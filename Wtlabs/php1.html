@@ -1,0 +1,24 @@
+<html>
+ 	<body style="background:white;">
+
+ 	<form action="" method="POST">
+ 	Name:<input type="text" name="name"/>
+ 	Color of first character:<input type="text" name="color"/>
+ 	<input type="submit"/>
+
+</form>
+
+<?php
+function FirstCharacter($word, $color) {
+ 	$firstChar = mb_substr($word, 0, 1); // Get the first character
+ 	$restOfWord = mb_substr($word, 1); // Get the remaining characters
+    $coloredWord = '<span style="color: ' . $color . ';">' . $firstChar . '</span>' . $restOfWord; // Wrap the first character in a <span> tag with the specified color
+ 
+ 	echo $coloredWord;
+}
+
+FirstCharacter($_POST['name'],$_POST['color']);
+?>
+
+</body>
+</html>
